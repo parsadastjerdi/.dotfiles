@@ -1,3 +1,4 @@
 #!/bin/bash
 
-# Install LSPs
+# Install tools
+sudo apt install tmux
