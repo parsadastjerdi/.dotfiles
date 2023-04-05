@@ -63,6 +63,8 @@ fi
 
 sudo apt-get -y install python-dev
 
+GO111MODULE=on go get -v golang.org/x/tools/gopls@latest
+
 # sudo apt install tmux
 # sudo apt install vim
 # sudo apt install nvim
