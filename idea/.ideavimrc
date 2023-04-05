@@ -1,0 +1,34 @@
+# Plugins
+set surround
+set multiple-cursors
+
+set visualbell
+set noerrorbells
+set incsearch
+set ignorecase
+set smartcase
+
+# Intellij-specific actions
+map<c-x> <Action>(ShowErrorDescription)
+nnoremap ,e :action SearchEverywhere<CR>
+nnoremap ,g :action FindInPath<CR>
+nnoremap ,s :action FileStructurePopup<CR>
+
+nnoremap gd :action GotoDeclaration
+nnoremap gs :action GotoSuperMethod
+nnoremap gi :action GotoImplementation<CR>
+nooremap gb :action JumpToLastChange<CR>
+
+nnoremap U :action FindUsages<CR>
+nnoremap R :action RenameElement<CR>
+
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByLineComment<CR>
+
+noremap <C-CR> :action ShowIntentionActions<CR>
+
+nnoremap ,a :action GotoAction<CR>
+vnoremap ,a :action GotoAction<CR>
