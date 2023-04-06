@@ -1,9 +1,10 @@
 #!/bin/bash
 
-stow bash
+# default target is $HOME
+stow bash --target=$HOME
 stow helix --target="$HOME/.config/helix"
-stow idea
-stow stow
-stow tmux
-stow vim
-stow zsh
+stow idea --target=$HOME
+stow stow --target=$HOME
+stow tmux --target=$HOME
+stow vim --target=$HOME
+stow zsh --target=$HOME
