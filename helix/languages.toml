@@ -3,6 +3,13 @@ name = "rust"
 auto-format = false
 indent = { tab-width = 4, unit = " " }
 
+[language.language-server]
+command = "rustup"
+args = ["run", "stable", "rust-analyzer"]
+
+[language.config.check]
+command = "clippy"
+
 [[language]]
 name = "go"
 scope = "source.go"
@@ -13,3 +20,4 @@ auto-format = true
 comment-token = "//"
 language-server = { command = "gopls"}
 indent = { tab-width = 4, unit = " "}
+

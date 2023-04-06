@@ -63,12 +63,11 @@ fi
 
 sudo apt-get -y install python-dev
 
+# add gopls LSP for Golang
 GO111MODULE=on go get -v golang.org/x/tools/gopls@latest
 
-# sudo apt install tmux
-# sudo apt install vim
-# sudo apt install nvim
-# sudo apt install helix
+# add rust-analyzer LSP for Rust
+rustup component add rust-analyzer
 
 # Give summary of what has been installed
 echo -e "\n====== Summary ======\n"
