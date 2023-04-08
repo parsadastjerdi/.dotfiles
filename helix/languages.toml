@@ -1,6 +1,7 @@
+# Rust configuration
 [[language]]
 name = "rust"
-auto-format = false
+auto-format = true
 indent = { tab-width = 4, unit = " " }
 
 [language.language-server]
@@ -10,6 +11,7 @@ args = ["run", "stable", "rust-analyzer"]
 [language.config.check]
 command = "clippy"
 
+# Golang configuration
 [[language]]
 name = "go"
 scope = "source.go"
@@ -17,7 +19,17 @@ injection-regex = "go"
 file-types = ["go"]
 roots = ["Gopkg.toml", "go.mod"]
 auto-format = true
-comment-token = "//"
+formatter = { command = "goimports" }
 language-server = { command = "gopls"}
-indent = { tab-width = 4, unit = " "}
+comment-token = "//"
+# golang needs utf-8 offsets
+indent = { tab-width = 4, unit = "\t"}
+
+[language.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterTypes = true
+rangeVariableTypes = true
 

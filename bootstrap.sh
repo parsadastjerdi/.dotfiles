@@ -23,14 +23,12 @@ else
 fi
 
 
-
 # install git-completion and git-prompt
 cd ~/
 curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
 mv ~/git-completion.bash ~/.git-completion.bash
 curl https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 echo "git-completion and git-prompt Installed and Configured" >> $log_file
-
 
 
 sudo apt-get -y install python-pip
@@ -63,8 +61,14 @@ fi
 
 sudo apt-get -y install python-dev
 
+# install Golang related tools
 # add gopls LSP for Golang
 GO111MODULE=on go get -v golang.org/x/tools/gopls@latest
+
+# go goimports for auto-imports in Helix
+GO111MODULE=on go get -v golang.org/x/tools/cmd/goimports@latest
+
+
 
 # add rust-analyzer LSP for Rust
 rustup component add rust-analyzer
