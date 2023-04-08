@@ -1,14 +1,9 @@
-# Plugins
-set surround
-set multiple-cursors
 
-set visualbell
-set noerrorbells
-set incsearch
-set ignorecase
-set smartcase
+source ../vim/.vimrc
 
 # Intellij-specific actions
+set ideajoin
+
 map<c-x> <Action>(ShowErrorDescription)
 nnoremap ,e :action SearchEverywhere<CR>
 nnoremap ,g :action FindInPath<CR>
