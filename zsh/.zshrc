@@ -111,9 +111,14 @@ HISTFILE=~/.zsh_history
 alias la="ls -A"
 alias ll="ls -l"
 
+# cargo aliases
 alias cb="cargo build"
 alias cbr="cargo build --release"
 alias cr="cargo run"
 alias cc="cargo check"
 
-export PATH=$PATH:/home/parsadastjerdi/go/bin
+# Export paths for LSPs
+export PATH=$PATH:$HOME/go/bin
+
+# Export GOPATH
+export PATH=$PATH:/usr/local/go/bin
