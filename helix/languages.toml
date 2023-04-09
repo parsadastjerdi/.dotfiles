@@ -33,3 +33,9 @@ functionTypeParameters = true
 parameterTypes = true
 rangeVariableTypes = true
 
+# C# configuration
+[[language]]
+name = "c-sharp"
+auto-format = true
+indent = { tab-width = 4, unit = " " }
+# language-server = { command = "omnisharp" args = [ "--languageserver"] }
