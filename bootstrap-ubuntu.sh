@@ -13,6 +13,7 @@ install_git_completion()
 install_tmux()
 install_stow()
 install_helix()
+install_docker()
 install_python()
 install_rust()
 install_golang()
@@ -71,6 +72,10 @@ install_stow() {
 install_helix() {
     sudo add-apt-repository ppa:maveonair/helix-editor
     sudo apt install helix
+}
+
+install_docker() {
+    // TODO: fill this out
 }
 
 install_python() {   
