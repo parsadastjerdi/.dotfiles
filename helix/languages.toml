@@ -42,4 +42,5 @@ roots = ["sln", "csproj"]
 file-types = ["cs"]
 comment-token = "//"
 indent = { tab-width = 4, unit = " " }
-language-server = { command = "omnisharp", args = ["-lsp"], timeout=10000 }
+auto-format = true
+language-server = { command = "omnisharp", args = ["-lsp"], timeout = 10000 }
