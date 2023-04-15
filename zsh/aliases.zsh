@@ -18,3 +18,6 @@ alias cb="cargo build"
 alias cbr="cargo build --release"
 alias crr="cargo run" # would conflict with cr tool
 alias cc="cargo check"
+
+# golang aliases
+alias prisma="go run github.com/prisma/prisma-client-go"
