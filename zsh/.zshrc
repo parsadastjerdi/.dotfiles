@@ -63,7 +63,7 @@ ZSH_THEME="robbyrussell"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/dotfiles/zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -91,31 +91,11 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="hx ~/.zshrc"
-alias ohmyzsh="hx ~/.oh-my-zsh"
-alias hxconfig="hx ~/.config/helix/config.toml"
-alias hxlangconfig="hx ~/.config/helix/languages.toml"
-alias loadzsh="source ~/.zshrc"
-
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-alias la="ls -A"
-alias ll="ls -l"
-
-# cargo aliases
-alias cb="cargo build"
-alias cbr="cargo build --release"
-alias cr="cargo run"
-alias cc="cargo check"
 
 # Export paths for LSPs
 export PATH=$PATH:$HOME/go/bin

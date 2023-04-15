@@ -36,6 +36,10 @@ rangeVariableTypes = true
 # C# configuration
 [[language]]
 name = "c-sharp"
-auto-format = true
+scope = "source.cs"
+injection-regex = "c-?sharp"
+roots = ["sln", "csproj"]
+file-types = ["cs"]
+comment-token = "//"
 indent = { tab-width = 4, unit = " " }
-# language-server = { command = "omnisharp" args = [ "--languageserver"] }
+language-server = { command = "omnisharp", args = ["-lsp"], timeout=10000 }
