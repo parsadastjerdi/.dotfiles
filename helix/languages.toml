@@ -44,3 +44,12 @@ comment-token = "//"
 indent = { tab-width = 4, unit = " " }
 auto-format = true
 language-server = { command = "omnisharp", args = ["-lsp"], timeout = 10000 }
+
+# Typescript configuration
+[[language]]
+name = "typescript"
+language-server.command = "typescript-language-server.cmd"
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
