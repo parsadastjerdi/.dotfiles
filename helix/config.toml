@@ -1,18 +1,29 @@
-theme = "tokyonight"
+theme = "catppuccin_mocha"
 
 [editor]
 true-color = true
 line-number = "relative"
 mouse = false
 bufferline = "multiple"
+cursorline=true
+rulers=[120]
 
 [editor.cursor-shape]
 insert = "bar"
+normal = "block"
+select = "underline"
+
+# [editor.indent-lines]
+# character = "|"
+# render = true
 
 [editor.lsp]
 display-messages = true
-auto-signature-help = true
+# auto-signature-help = false # turn this on to get help filling out methods
 display-signature-help-docs = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
 
 [keys.insert]
 up = "no_op"
@@ -34,3 +45,9 @@ right = "no_op"
 # home = "no_op"
 # end = "no_op"
 esc = ["collapse_selection", "keep_primary_selection"]
+# A-x = "extend_to_line_bounds"
+# X = ["extend_line_up", "extend_to_line_bounds"]
+
+# [keys.select]
+# A-x = "extend_to_line_bounds"
+# X = ["extend_line_up", "extend_to_line_bounds"]
