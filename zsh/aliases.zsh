@@ -10,6 +10,13 @@ alias hxconfig="hx ~/.config/helix/config.toml"
 alias hxlangconfig="hx ~/.config/helix/languages.toml"
 alias loadzsh="source ~/.zshrc"
 
+alias gs="git status"
+alias gd="git diff"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gca="git commit --amend"
+alias gpo="git pull origin"
+
 alias la="ls -A"
 alias ll="ls -l"
 

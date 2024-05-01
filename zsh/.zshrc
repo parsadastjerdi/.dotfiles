@@ -74,12 +74,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-alias gs="git status"
-alias gd="git diff"
-alias gc="git commit"
-alias gcm="git commit -m"
-alias gca="git commit --amend"
-
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
