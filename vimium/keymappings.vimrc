@@ -1,8 +1,6 @@
 map ge scrollToBottom
-map <c-u> scrollPageUp
-map <c-d> scrollPageDown
-map <c-f> scrollFullPageDown
-map <c-b> scrollFullPageUp
+map <c-d> scrollFullPageDown
+map <c-u> scrollFullPageUp
 map zh scrollToLeft
 map zl scrollToRight
 map gh firstTab
