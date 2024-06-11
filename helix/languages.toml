@@ -3,13 +3,10 @@
 name = "rust"
 auto-format = true
 indent = { tab-width = 4, unit = " " }
+language-servers = ["rust-analyzer"]
 
-[language.language-server]
-command = "rustup"
-args = ["run", "stable", "rust-analyzer"]
-
-[language.config.check]
-command = "clippy"
+[language-server.rust-analyzer.config]
+checkOnSave = { command = "clippy" }
 
 # Golang configuration
 [[language]]
@@ -20,36 +17,31 @@ file-types = ["go"]
 roots = ["Gopkg.toml", "go.mod"]
 auto-format = true
 formatter = { command = "goimports" }
-language-server = { command = "gopls"}
+language-servers = ["gopls"]
 comment-token = "//"
 # golang needs utf-8 offsets
 indent = { tab-width = 4, unit = "\t"}
 
-[language.config.hints]
-assignVariableTypes = true
-compositeLiteralFields = true
-constantValues = true
-functionTypeParameters = true
-parameterTypes = true
-rangeVariableTypes = true
-
-# C# configuration
-[[language]]
-name = "c-sharp"
-scope = "source.cs"
-injection-regex = "c-?sharp"
-roots = ["sln", "csproj"]
-file-types = ["cs"]
-comment-token = "//"
-indent = { tab-width = 4, unit = " " }
-auto-format = true
-language-server = { command = "omnisharp", args = ["-lsp"], timeout = 10000 }
-
-# Typescript configuration
 [[language]]
 name = "typescript"
-language-server.command = "typescript-language-server.cmd"
+language-servers = ["typescript-language-server"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server"]
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+
+[[language]] 
+name = "jsx"
+language-servers = ["typescript-language-server"]
+
 
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+
